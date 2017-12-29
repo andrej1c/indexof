@@ -12,17 +12,6 @@ function index_of_get_primary_category_id( $post_id = null ) {
 	return $category_id;
 }
 
-function index_of_add_screen_cast_post_type() {
-	$args = [
-		'public' => true,
-		'label'  => 'Screencasts',
-		'exclude_from_search' => true,
-		'hierarchical' => 'false',
-	];
-	register_post_type( 'screencast', $args );
-}
-add_action( 'init', 'index_of_add_screen_cast_post_type' );
-
 function index_of_page_structure_links( $post_id = null) {
 	if ( empty( $post_id ) ) {
 		$post_id = get_the_id();
