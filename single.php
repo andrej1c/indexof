@@ -5,17 +5,14 @@
 
 <table width="100%">
 	<tr>
-		<th width="30%"><a href="#">Post Title</a></th>
-		<th width="20%"><a href="#">Posted</a></th>
+		<th width="30%">&nbsp;</th>
+		<th width="70%">Posted</th>
 	</tr>
 	<tr>
-		<td colspan="3">
+		<td>
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/back.gif" alt="Back" />
 			<a href="<?php echo get_category_link( index_of_get_primary_category_id( get_the_id() ) );?>">Parent Directory</a>
 		</td>
-	</tr>
-	<tr>
-		<td><strong><?php the_title(); ?></strong></td>
 		<td><?php the_time( 'Y-m-d H:i' ); ?></td>
 	</tr>
 </table>
