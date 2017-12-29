@@ -1,0 +1,58 @@
+/*
+Theme Name: IndexOf
+Theme URI: https://github.com/andrej1c/indexof
+Author: Andrej Ciho
+Author URI: https://andrejciho.com/
+Description: WordPress theme based on Apache's Directory Listing
+Version: 1.0
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+body {
+  font: normal 11px Courier;
+}
+
+h1 {
+  font: normal 29px Times;
+  font-weight: bold;
+}
+
+table {
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+table tr {
+	border: 0px solid #ccc;
+}
+
+table tr td {
+	border: 0px solid #ccc;
+	vertical-align: bottom;
+	padding: 2px 5px;
+}
+
+table tr th {
+	padding: 0 5px 5px 5px;
+	border-bottom: 1px solid #222;
+	vertical-align: bottom;
+	text-align: left;
+	font-weight: normal;
+}
+table tr.sortbottom td {
+	border-bottom: 1px solid #222;
+}
+p {
+  padding: 0;
+  margin: 10px 0;
+}
+
+td p {
+  margin: 0;
+}
+
+.post .post-title {
+  font-size: 2em;
+}
