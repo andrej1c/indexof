@@ -22,7 +22,7 @@
 	<tr>
 		<td><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/text.gif" alt="[DIR]" /> <a href="<?php echo esc_url( get_the_permalink() ); ?>" title="Permalink to <?php the_title; ?>" rel="bookmark"><?php the_title(); ?></a></td>
 		<td><?php the_time( 'Y-m-d H:i' ) ?></td>
-		<td><?php comments_popup_link( '0', '1', '%' ); ?></td>
+		<td><?php if ( comments_open() ) { comments_popup_link( '0', '1', '%' ); } else { echo 'Comments Closed'; } ?></td>
 		<td><?php the_category( ' ', true ); ?></td>
 	</tr>
 	<?php endwhile; ?>
