@@ -22,7 +22,7 @@
 <?php comments_template(); ?>
 
 <?php endwhile; else: ?>
-	<?php include( get_template_directory() . '/errortext.php' ); ?>
+	<?php get_template_part( 'error' ); ?>
 <?php endif;
 
 get_footer();
