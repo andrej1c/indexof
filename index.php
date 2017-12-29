@@ -6,10 +6,10 @@
 
 <table class="sortable" id="posts" width="100%">
 	<tr>
-		<th width="35%">Name</th>
+		<th width="55%">Name</th>
 		<th width="17%">Last modified</th>
 		<th width="8%">Comments</th>
-		<th width="40%">Category</th>
+		<th width="20%">Category</th>
 	</tr>
 	<tr class="sorttop">
 		<td><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/back.gif" alt="Back" />
