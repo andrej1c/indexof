@@ -14,7 +14,7 @@ the_title(); ?></h1>
 		</td>
 
 		<?php
-		$sub_pages = get_pages( [ 'parent' => get_the_id() ] );
+		$sub_pages = get_pages( [ 'parent' => get_the_id(), 'sort_column' => 'menu_order' ] );
 		if ( ! empty( $sub_pages ) ) {
 		?>
 		<td>
