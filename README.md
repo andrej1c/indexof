@@ -11,4 +11,4 @@ WordPress theme based on Apache's Directory Listing
 
 *Blog*
 
-![blog](https://user-images.githubusercontent.com/173229/34442247-ddf173e4-ec8e-11e7-9b82-f2c7e7b2e09d.png)
+![blog2](https://user-images.githubusercontent.com/173229/34442574-03baa922-ec91-11e7-9a83-6ab3724c2852.png)
