@@ -52,6 +52,7 @@ function index_of_blog_page_link() {
 function index_of_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
+	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'after_setup_theme', 'index_of_setup' );
 

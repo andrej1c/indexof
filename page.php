@@ -12,13 +12,17 @@ the_title(); ?></h1>
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/back.gif" alt="Back" />
 			<a href="<?php echo esc_url( index_of_page_parent( get_the_id() ) );?>">Parent Directory</a>
 		</td>
-	</tr>
-	<?php
-	$sub_pages = get_pages( [ 'parent' => get_the_id() ] );
-	if ( ! empty( $sub_pages ) ) {
+
+		<?php
+		$sub_pages = get_pages( [ 'parent' => get_the_id() ] );
+		if ( ! empty( $sub_pages ) ) {
 		?>
+		<td>
+			<strong>Description</strong>
+		</td>
+		</tr>
 		<tr>
-			<td>
+			<td colspan="2">
 				<strong>Sub-Pages</strong>
 			</td>
 		</tr>
@@ -26,13 +30,23 @@ the_title(); ?></h1>
 		foreach ( $sub_pages as $sub_page ) {
 			?>
 			<tr>
-				<td><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/text.gif" alt="[DIR]" /> <a href="<?php echo esc_url( get_permalink( $sub_page->ID ) ); ?>" title="Permalink to <?php echo $sub_page->post_title; ?>" rel="bookmark"><?php echo $sub_page->post_title; ?></a></td>
+				<td>
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/text.gif" alt="[DIR]" /> <a href="<?php echo esc_url( get_permalink( $sub_page->ID ) ); ?>" title="Permalink to <?php echo $sub_page->post_title; ?>" rel="bookmark"><?php echo $sub_page->post_title; ?></a>
+				</td>
+				<td>
+					<?php echo esc_html( $sub_page->post_excerpt ); ?>
+				</td>
 			</tr>
 			<?php
 		} ?>
 		<tr>
 		<?php
-	} ?>
+	} else {
+		?>
+		</tr>
+		<?php
+	}
+	?>
 </table>
 
 
