@@ -7,6 +7,15 @@ $page_links = index_of_page_structure_links( get_the_id() );
 echo ! empty( $page_links ) ? implode( '/', $page_links ) . '/' : '';
 the_title(); ?></h1>
 <hr />
+
+<?php
+$content = get_the_content();
+if ( ! empty( $content ) ) {
+	the_content();
+	echo '<hr />';
+}
+?>
+
 <table width="100%">
 	<tr>
 		<td>
@@ -44,8 +53,6 @@ the_title(); ?></h1>
 	}
 	?>
 </table>
-
-<hr /><?php the_content(); ?>
 
 <?php endwhile; else: ?>
 	<?php include( get_template_directory() . '/errortext.php' ); ?>
