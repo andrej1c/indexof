@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <h1>Index of /<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>/<?php
 $page_links = index_of_page_structure_links( get_the_id() );
 echo ! empty( $page_links ) ? implode( '/', $page_links ) . '/' : '';
@@ -20,11 +21,6 @@ the_title(); ?></h1>
 		<td>
 			<strong>Description</strong>
 		</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				<strong>Sub-Pages</strong>
-			</td>
 		</tr>
 		<?php
 		foreach ( $sub_pages as $sub_page ) {
@@ -49,11 +45,7 @@ the_title(); ?></h1>
 	?>
 </table>
 
-
-
-<hr />
-	<?php the_content(); ?>
-<hr />
+<hr /><?php the_content(); ?>
 
 <?php endwhile; else: ?>
 	<?php include( get_template_directory() . '/errortext.php' ); ?>

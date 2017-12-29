@@ -27,7 +27,7 @@
 	</tr>
 	<?php endwhile; ?>
 </table>
-<hr />
+
 <?php else : ?>
 	<?php include( get_template_directory() . '/errortext.php' ); ?>
 <?php endif;

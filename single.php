@@ -17,9 +17,8 @@
 	</tr>
 </table>
 
-<hr />
-	<?php the_content(); ?>
-<hr />
+<hr /><?php the_content(); ?>
+
 <?php comments_template(); ?>
 
 <?php endwhile; else: ?>

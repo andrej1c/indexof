@@ -40,6 +40,5 @@ get_header(); ?>
 	}
 	?>
 </table>
-<hr />
 
 <?php get_footer(); ?>
